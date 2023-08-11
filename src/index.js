@@ -2,7 +2,9 @@
 
 const express = require("express");
 const app = require("./app.js");
+require("dotenv").config();
 const mongoose = require("mongoose");
+
 const port = process.env.PORT || 3000;
 
 // Wide listing a cors to accept a specific domain route
@@ -15,8 +17,7 @@ app.use(express.urlencoded({ extended: false })); // Parsing URL-encoded bodies
 //enable cors usage
 app.use(cors());
 // Connect to DATABASE
-const DATABASE_URL =
-  "mongodb+srv://Brijesh:161020@cluster0.cb5xrvq.mongodb.net/";
+const DATABASE_URL = process.env.MONGODB_URI;
 mongoose.connect(DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -26,4 +27,6 @@ db.on("error", (err) => console.log(err));
 db.once("open", () => console.log("connected to database"));
 
 // Start Server
-app.listen(port, () => console.log(`App listening on port ${port}!`));
+app.listen(port, () =>
+  console.log(`App listening on port ${port}!`)
+);
