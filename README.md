@@ -2,7 +2,9 @@
 This is a backend capston project given by the Almabetter which is Get-Youtube-Subscribers
 # API Endpoints
  Get/subscribers: Provide an array of all subscribers
+ 
  Get/subscribers/names: Provide an array of all subscribers with only two field names and subscriberdChannel
+ 
  Get/subscribers/:id: Provide details of particuler user of given id
  
 # Install dependencies
