@@ -23,6 +23,3 @@ Click on the link to see my Get-Youtube-Subscribers website
 
 https://drab-gray-cod-wig.cyclic.app
 
-#skills
-
-javascript 
